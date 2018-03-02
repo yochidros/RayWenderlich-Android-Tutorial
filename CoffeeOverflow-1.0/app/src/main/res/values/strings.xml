@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">CoffeeOverflow</string>
+    <string name="coffee_limit_label">Coffee Limit</string>
+    <string name="default_coffee_limit">5</string>
+    <string name="coffee_limit_input_hint">Limit</string>
+    <string name="amount_consumed">Amount Consumed</string>
+    <string name="consumed_format">%1$d of %2$s</string>
+    <string name="add_coffee">Add Coffee</string>
+</resources>

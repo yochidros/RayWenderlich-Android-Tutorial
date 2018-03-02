@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="beersList" type="id" />
+    <item name="pullToRefresh" type="id" />
+    <item name="errorView" type="id" />
+    <item name="beerImage" type="id" />
+    <item name="beerName" type="id" />
+    <item name="beerStyle" type="id" />
+</resources>

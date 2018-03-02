@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Forget Me Not</string>
+    <string name="add_task">Add a task</string>
+    <string name="description">Enter task description:</string>
+    <string name="done">Done</string>
+    <string name="alert_title">Task</string>
+    <string name="delete">Delete</string>
+    <string name="cancel">Cancel</string>
+</resources>

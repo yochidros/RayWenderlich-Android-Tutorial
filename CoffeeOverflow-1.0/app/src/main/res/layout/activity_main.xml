@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipChildren="false"
+    android:clipToPadding="false"
+    android:padding="@dimen/activity_padding">
+
+  <LinearLayout
+      android:id="@+id/mainContent"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/consumedContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_weight="1"
+          android:text="@string/amount_consumed"
+          android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+      <TextView
+          android:id="@+id/amountConsumed"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="end"
+          android:layout_weight="1"
+          android:textAlignment="textEnd"
+          android:textAppearance="@style/TextAppearance.AppCompat.Title"
+          tools:text="3 of 5"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+      <TextView
+          android:id="@+id/coffeeLimitLabel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="start|center_vertical"
+          android:layout_weight="1"
+          android:text="@string/coffee_limit_label"
+          android:textAppearance="@style/TextAppearance.AppCompat.Title"/>
+
+      <!-- Dummy item to prevent EditText from receiving focus on Activity start -->
+      <LinearLayout
+          android:layout_width="0px"
+          android:layout_height="0px"
+          android:focusable="true"
+          android:focusableInTouchMode="true"/>
+
+      <EditText
+          android:id="@+id/coffeeLimitValue"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="end"
+          android:layout_weight="1"
+          android:hint="@string/coffee_limit_input_hint"
+          android:inputType="number"
+          android:text="@string/default_coffee_limit"
+          android:textAlignment="textEnd"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingTop="50dp">
+
+      <ImageView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_gravity="center_vertical"
+          android:layout_marginEnd="-15dp"
+          android:src="@drawable/handle"/>
+
+      <ProgressBar
+          android:id="@+id/coffeeProgress"
+          android:layout_width="150dp"
+          android:layout_height="200dp"
+          android:indeterminateOnly="false"
+          android:progressDrawable="@drawable/progressbar_states"/>
+
+    </LinearLayout>
+
+  </LinearLayout>
+
+  <android.support.design.widget.FloatingActionButton
+      android:id="@+id/addCoffee"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:clickable="true"
+      android:focusable="true"
+      android:contentDescription="@string/add_coffee"
+      android:src="@drawable/ic_add_24px"
+      app:fabSize="normal"
+      app:layout_anchor="@id/mainContent"
+      app:layout_anchorGravity="bottom|right|end"
+      tools:targetApi="lollipop_mr1"/>
+</android.support.design.widget.CoordinatorLayout>
